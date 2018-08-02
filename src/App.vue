@@ -1,28 +1,39 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+   <side-bar/>
+   <app-content/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SideBar from './components/SideBar.vue';
+import Content from './components/Content.vue';
 
 export default {
   name: 'app',
+  data() {},
   components: {
-    HelloWorld
-  }
-}
+    SideBar,
+    appContent: Content,
+  },
+};
 </script>
 
-<style>
+<style  lang="scss" >
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700,800');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Muli', sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
 }
 </style>
