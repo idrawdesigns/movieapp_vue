@@ -1,7 +1,5 @@
 <template>
-  <div class="hello">
-    <h3>TV/movies</h3>
-  </div>
+ <h3>Movies & Tv</h3>
 </template>
 
 <script>
@@ -14,5 +12,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 </style>
+

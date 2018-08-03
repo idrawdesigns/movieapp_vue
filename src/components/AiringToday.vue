@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h3>Popular Tv shows</h3>
+    <h3>Airing today</h3>
   </div>
 </template>
 

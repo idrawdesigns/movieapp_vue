@@ -5,40 +5,43 @@
     </div>
     <ul class="movie-nav">
       <li class="title"> BROWSE TELLY</li>
-      <li class="active">
-        <a href="#">MOVIES & TV</a>
+      <li @click.prevent >
+        <a href="#" @click.prevent="navigate('MoviesTv','Movies&TV')">MOVIES & TV</a>
       </li>
       <li >
-        <a href="#">POPULAR MOVIES</a>
+        <a href="#" @click.prevent="navigate('PopularMovies','Popular Movies')">POPULAR MOVIES</a>
       </li>
       <li >
-        <a href="#">POPULAR TV SHOWS</a>
+        <a href="#" @click.prevent="navigate('PopularTvShows','Popular Tv Shows')" >POPULAR TV SHOWS</a>
       </li>
       <br>
       <li class="title"> CATEGORIES</li>
        <li >
-        <a href="#">UP COMING MOVIES</a>
+        <a href="#" @click.prevent="navigate('UpComingMovies','Up Coming Movies')">UP COMING MOVIES</a>
       </li>
        <li >
-        <a href="#"> TV SHOWS AIRING TODAY</a>
+        <a href="#" @click.prevent="navigate('AiringToday','Airing Today')"> TV SHOWS AIRING TODAY</a>
       </li>
     </ul>
   </aside>
 </template>
 
 <script>
-export default {};
+import { eventBus } from '../main';
+export default {
+  methods: {
+    navigate(neView, title) {
+      eventBus.$emit('changeView', {
+        tag: neView,
+        title: title,
+      });
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-$sidebkg: #232d32;
-$title: #95878b;
-$swatch_3: #dc8873;
-$active: #0cd0fc;
-$primary: #ecebee;
-$secondary: #9eb3c4;
-$swatch_7: #dec1b5;
-$btncolor: #55e4f5;
+@import '../sass/colors';
 
 .side {
   background-color: $sidebkg;

@@ -21,6 +21,22 @@ export default {
 
 <style  lang="scss" >
 @import url('https://fonts.googleapis.com/css?family=Muli:400,700,800');
+$sidebkg: #232d32;
+$maincont: #0a0e0f;
+$title: #95878b;
+$swatch_3: #dc8873;
+$active: #0cd0fc;
+$primary: #ecebee;
+$secondary: #9eb3c4;
+$swatch_7: #dec1b5;
+$btncolor: #55e4f5;
+$title: #95878b;
+$swatch_3: #dc8873;
+$active: #0cd0fc;
+$primary: #ecebee;
+$secondary: #9eb3c4;
+$swatch_7: #dec1b5;
+$btncolor: #55e4f5;
 
 * {
   margin: 0;
