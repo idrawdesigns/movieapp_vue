@@ -16,7 +16,6 @@
             </div>
 
             <div class="content-wrapper">
-              <h3>{{currentView.title}}</h3>
               <keep-alive>
                 <component :is='currentView.tag'/>
                 </keep-alive>
@@ -39,15 +38,15 @@ export default {
     PopularMovies,
     PopularTvShows,
     AiringToday,
-    UpComingMovies,
+    UpComingMovies
   },
   created() {
     eventBus.$on('changeView', data => {
       let temp = [
         {
           tag: data.tag,
-          title: data.title,
-        },
+          title: data.title
+        }
       ];
       this.history = temp.concat(this.history.splice(0));
     });
@@ -57,33 +56,33 @@ export default {
       history: [
         {
           tag: 'TvMovies',
-          title: 'Movies & Tv',
+          title: 'Movies & Tv'
         },
         {
           tag: 'PopularMovies',
-          title: 'Popular Movies',
+          title: 'Popular Movies'
         },
         {
           tag: 'PopularTvShows',
-          title: 'Popular Tv Shows',
+          title: 'Popular Tv Shows'
         },
         {
           tag: 'AiringToday',
-          title: 'Airing Today',
+          title: 'Airing Today'
         },
         {
           tag: 'UpComingMovies',
-          title: 'Up Coming Movies',
-        },
-      ],
+          title: 'Up Coming Movies'
+        }
+      ]
     };
   },
 
   computed: {
     currentView() {
       return this.history[0];
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -126,5 +125,18 @@ export default {
   display: grid;
   grid-auto-rows: 1fr 1fr;
   grid-row-gap: 250px;
+  display: flex;
+}
+
+.list {
+  display: flex;
+}
+
+.list-item {
+  width: 150px;
+  color: white;
+  background-color: #232d32;
+  padding: 10px;
+  margin: 5px;
 }
 </style>

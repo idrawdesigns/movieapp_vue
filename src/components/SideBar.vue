@@ -7,7 +7,7 @@
       <li class="title"> BROWSE TELLY</li>
       <li @click.prevent >
         <a href="#" @click.prevent="navigate('MoviesTv','Movies&TV')">MOVIES & TV</a>
-      </li>
+      </li> 
       <li >
         <a href="#" @click.prevent="navigate('PopularMovies','Popular Movies')">POPULAR MOVIES</a>
       </li>

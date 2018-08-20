@@ -11,11 +11,10 @@ import Content from './components/Content.vue';
 
 export default {
   name: 'app',
-  data() {},
   components: {
     SideBar,
-    appContent: Content,
-  },
+    appContent: Content
+  }
 };
 </script>
 
